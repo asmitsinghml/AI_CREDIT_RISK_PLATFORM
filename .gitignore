@@ -25,31 +25,4 @@ report.txt
 
 # OS Generated Files
 .DS_Store
-Thumbs.db# Virtual Environment
-.venv/
-venv/
-ENV/
-
-# Secrets & Environment Variables (NEVER PUSH)
-.env
-.env.local
-
-# Python Cache & Bytecode
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-
-# PDF Documents (Data is already on Supabase Cloud)
-docs/
-*.pdf
-
-# Temporary & Benchmark Test Scripts
-check_models.py
-test_models.py
-test_search.py
-report.txt
-
-# OS Generated Files
-.DS_Store
 Thumbs.db
