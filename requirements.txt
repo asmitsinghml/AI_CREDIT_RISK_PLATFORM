@@ -1,0 +1,9 @@
+langchain
+langchain-community
+langchain-huggingface
+pypdf
+sentence-transformers
+psycopg2-binary
+pgvector
+python-dotenv
+tqdm
