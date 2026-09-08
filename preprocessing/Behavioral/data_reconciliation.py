@@ -529,3 +529,58 @@ else:
         "IDs only in Python:",
         len(python_failed_ids_5 - excel_failed_ids_5)
     )
+   
+# CHECK 6: LTV_time Missing Value Check
+
+print("\n" + "=" * 70)
+print("CHECK 6: LTV_time MISSING VALUE CHECK")
+print("=" * 70)
+
+# LTV_time blank hai ya nahi
+df["CHECK 6"] = df["LTV_time"].isna().astype(int)
+
+# Failed rows
+failed_rows_check6 = df[df["CHECK 6"] == 1]
+
+# Failed IDs
+failed_ids_check6 = failed_rows_check6["id"].unique()
+
+print("Missing LTV_time rows :", len(failed_rows_check6))
+print("Failed IDs            :", len(failed_ids_check6))
+
+print("\nSample failed IDs:")
+print(failed_ids_check6[:10])
+
+# Excel CHECK 6 ke according:
+# LTV_time blank -> 1
+# LTV_time available -> 0
+
+print("\nCHECK 6 COMPLETED")
+
+# CHECK 6: LTV_time MISSING VALUE CHECK
+
+print("\n" + "=" * 70)
+print("CHECK 6: LTV_time MISSING VALUE CHECK")
+print("=" * 70)
+
+# Excel logic:
+# LTV_time blank  -> 1
+# LTV_time present -> 0
+
+df["CHECK 6"] = df["LTV_time"].isna().astype(int)
+
+# Rows where LTV_time is missing
+failed_rows_check6 = df[df["CHECK 6"] == 1]
+
+# IDs having missing LTV_time
+failed_ids_check6 = failed_rows_check6["id"].unique()
+
+print("Missing LTV_time rows :", len(failed_rows_check6))
+print("Failed IDs            :", len(failed_ids_check6))
+
+print("\nSample failed IDs:")
+print(failed_ids_check6[:10])
+
+print("\n" + "=" * 70)
+print("CHECK 6 COMPLETED")
+print("=" * 70)
